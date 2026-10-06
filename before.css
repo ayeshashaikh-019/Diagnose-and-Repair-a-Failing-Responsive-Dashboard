@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f4f7;
+    color: #222;
+}
+
+/* Deliberate Problem 1:
+   Fixed-width header and large fixed spacing */
+.topbar {
+    width: 1200px;
+    margin: 0 auto;
+    min-height: 75px;
+    background-color: #1f2937;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 30px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Deliberate Problem 2:
+   Navigation does not wrap and uses large fixed gaps */
+.navigation {
+    display: flex;
+    gap: 35px;
+    white-space: nowrap;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Main dashboard has fixed width */
+.dashboard {
+    width: 1180px;
+    margin: 30px auto;
+}
+
+/* Welcome area */
+.welcome {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.welcome h1 {
+    margin-bottom: 8px;
+}
+
+.welcome p {
+    margin-top: 0;
+    color: #666;
+}
+
+.refresh-btn {
+    padding: 12px 20px;
+    border: none;
+    background-color: #2563eb;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Deliberate Problem 3:
+   Cards use a fixed width */
+.summary-row {
+    display: flex;
+    gap: 20px;
+}
+
+.summary-card {
+    width: 280px;
+    flex: 0 0 280px;
+
+    background-color: white;
+    padding: 22px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.summary-card h2 {
+    font-size: 17px;
+    margin-top: 0;
+}
+
+.number {
+    font-size: 34px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.summary-card span {
+    color: #666;
+}
+
+/* Deliberate Problem 4:
+   Both columns have fixed widths */
+.main-panels {
+    display: flex;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.status-panel {
+    width: 520px;
+    flex: 0 0 520px;
+
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.orders-panel {
+    width: 520px;
+    flex: 0 0 520px;
+
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+/* Status items */
+.status-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Deliberate Problem 5:
+   Fixed table width */
+table {
+    width: 480px;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #eef2ff;
+}

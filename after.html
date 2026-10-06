@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Operations Dashboard - Responsive</title>
+    <link rel="stylesheet" href="after.css">
+</head>
+<body>
+
+    <header class="topbar">
+
+        <div class="logo">
+            SwiftDrop
+        </div>
+
+        <nav class="navigation">
+            <a href="#">Dashboard</a>
+            <a href="#">Deliveries</a>
+            <a href="#">Orders</a>
+            <a href="#">Drivers</a>
+            <a href="#">Reports</a>
+        </nav>
+
+        <div class="user-info">
+            Admin
+        </div>
+
+    </header>
+
+    <main class="dashboard">
+
+        <section class="welcome">
+
+            <div class="welcome-text">
+                <h1>Operations Dashboard</h1>
+                <p>Monitor today's delivery activity and recent orders.</p>
+            </div>
+
+            <button class="refresh-btn">Refresh Data</button>
+
+        </section>
+
+        <!-- Summary Cards -->
+        <section class="summary-row">
+
+            <article class="summary-card">
+                <h2>Total Deliveries</h2>
+                <p class="number">248</p>
+                <span>Today's deliveries</span>
+            </article>
+
+            <article class="summary-card">
+                <h2>Delivered</h2>
+                <p class="number">192</p>
+                <span>Completed successfully</span>
+            </article>
+
+            <article class="summary-card">
+                <h2>In Transit</h2>
+                <p class="number">38</p>
+                <span>Currently on the road</span>
+            </article>
+
+            <article class="summary-card">
+                <h2>Delayed</h2>
+                <p class="number">18</p>
+                <span>Needs attention</span>
+            </article>
+
+        </section>
+
+        <!-- Main Panels -->
+        <section class="main-panels">
+
+            <section class="status-panel">
+
+                <h2>Delivery Status</h2>
+
+                <div class="status-item">
+                    <span>Delivered</span>
+                    <strong>192</strong>
+                </div>
+
+                <div class="status-item">
+                    <span>In Transit</span>
+                    <strong>38</strong>
+                </div>
+
+                <div class="status-item">
+                    <span>Delayed</span>
+                    <strong>18</strong>
+                </div>
+
+                <div class="status-item">
+                    <span>Returned</span>
+                    <strong>5</strong>
+                </div>
+
+            </section>
+
+            <section class="orders-panel">
+
+                <h2>Recent Orders</h2>
+
+                <div class="table-wrapper">
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Customer</th>
+                                <th>Status</th>
+                                <th>Time</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>#SD-1045</td>
+                                <td>Ali Khan</td>
+                                <td>Delivered</td>
+                                <td>09:15 AM</td>
+                            </tr>
+
+                            <tr>
+                                <td>#SD-1046</td>
+                                <td>Sara Ahmed</td>
+                                <td>In Transit</td>
+                                <td>09:30 AM</td>
+                            </tr>
+
+                            <tr>
+                                <td>#SD-1047</td>
+                                <td>Hamza Ali</td>
+                                <td>Delayed</td>
+                                <td>09:45 AM</td>
+                            </tr>
+
+                            <tr>
+                                <td>#SD-1048</td>
+                                <td>Fatima Noor</td>
+                                <td>Delivered</td>
+                                <td>10:00 AM</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

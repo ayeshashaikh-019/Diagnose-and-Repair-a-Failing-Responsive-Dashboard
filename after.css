@@ -1,0 +1,228 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f4f7;
+    color: #222;
+}
+
+/* Responsive header */
+.topbar {
+    width: 100%;
+    min-height: 70px;
+    padding: 15px 4%;
+    background-color: #1f2937;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    font-size: clamp(20px, 2vw, 26px);
+    font-weight: bold;
+}
+
+/* Flexbox allows the navigation to adapt */
+.navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 22px;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.user-info {
+    white-space: nowrap;
+}
+
+/* Fluid dashboard width */
+.dashboard {
+    width: min(92%, 74rem);
+    margin: 30px auto;
+}
+
+/* Welcome section */
+.welcome {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.welcome h1 {
+    margin-bottom: 8px;
+    font-size: clamp(26px, 4vw, 38px);
+}
+
+.welcome p {
+    margin-top: 0;
+    color: #666;
+}
+
+.refresh-btn {
+    padding: 12px 20px;
+    border: none;
+    background-color: #2563eb;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* Responsive summary cards */
+.summary-row {
+    display: grid;
+
+    /* Four cards on large screens */
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+.summary-card {
+    min-width: 0;
+    background-color: white;
+    padding: 22px;
+    border-radius: 10px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.summary-card h2 {
+    font-size: 17px;
+    margin-top: 0;
+}
+
+.number {
+    font-size: 34px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.summary-card span {
+    color: #666;
+}
+
+/* Flexible two-column layout */
+.main-panels {
+    display: flex;
+    gap: 25px;
+    margin-top: 30px;
+    align-items: stretch;
+}
+
+.status-panel,
+.orders-panel {
+    flex: 1 1 0;
+    min-width: 0;
+
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+/* Status items */
+.status-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Table becomes flexible */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    min-width: 420px;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #eef2ff;
+}
+
+/* MEDIA QUERY 1: Tablet */
+@media (max-width: 56rem) {
+
+    .summary-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .main-panels {
+        flex-direction: column;
+    }
+
+    .status-panel,
+    .orders-panel {
+        width: 100%;
+    }
+}
+
+/* MEDIA QUERY 2: Mobile */
+@media (max-width: 38rem) {
+
+    .topbar {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .navigation {
+        justify-content: center;
+    }
+
+    .user-info {
+        text-align: center;
+    }
+
+    .welcome {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .refresh-btn {
+        width: 100%;
+    }
+
+    .summary-row {
+        grid-template-columns: 1fr;
+    }
+
+    .summary-card {
+        padding: 18px;
+    }
+
+    .number {
+        font-size: 30px;
+    }
+
+    .status-panel,
+    .orders-panel {
+        padding: 18px;
+    }
+}
